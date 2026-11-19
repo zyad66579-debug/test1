@@ -1,0 +1,6 @@
+{
+  "name": "Claude Code Free",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "postCreateCommand": "curl -fsSL https://claude.ai/install.sh | bash && curl -fsSL https://ollama.com/install.sh | sh && ollama pull qwen3.5:4b && echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.bashrc",
+  "postStartCommand": "ollama serve &"
+}
